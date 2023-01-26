@@ -7,7 +7,7 @@ from flask import (
 )
 
 APP = Flask(__name__)
-#APP.config['SECRET_KEY'] = 'super-secret-key'
+APP.config['SECRET_KEY'] = 'super-secret-key'
 
 
 AFFIRMATIONS = [

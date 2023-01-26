@@ -1,0 +1,9 @@
+h1{font-family: "Lucida Handwriting" ;}
+
+p{font-family: "Lucida Handwriting";font-size: 25px; }
+
+ul{border: 15px  double #ff33cc;width: 50%;font-size: 25px;font-family:"Georgia" ; }
+
+body {background: linear-gradient(to right, #cc00ff 0%, #ff99cc 100%);}
+
+img{width:40% ;border-style:dotted ;background-size: 15 px; }

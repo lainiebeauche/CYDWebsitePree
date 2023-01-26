@@ -1,0 +1,15 @@
+<ul>
+        <li><a href="{{url_for('home')}}">Home</a></li>
+        <li><a href="{{url_for('messages')}}">Chat Chambers </a></li>
+        <li><a href="{{url_for('blog')}}">Blog </a></li>
+        <li><a href="{{url_for('resource')}}">Re$ource$</a></li>
+        <li><a href="{{url_for('about')}}">About Us </a></li>
+        {% if session %}
+        <li><a href="profile">Profile</a></li>
+        <li><a href="logout">Logout</a></li>
+        {% else %}
+        <li><a href="login">Login</a></li>
+        <li><a href="signup">Sign Up</a></li>
+        {% endif %}
+
+</ul>

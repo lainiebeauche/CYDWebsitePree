@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            PEP
+        </title>
+        <link rel="stylesheet"
+              type="text/css"
+              href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <!-- Write the title of the page in a large heading font -->
+        <h1>
+            PEP
+        </h1>
+        <!-- Show the navbar -->
+        <div>
+            {% include "navbar.html" %}
+        </div>
+
+		<h2>Personal Empowerment Protocol</h2>
+		<ol>
+			<li>
+				Deep breath
+			</li>
+			<li>
+				Smile
+			</li>
+			<li>
+				Look it up on
+				<a href="https://www.w3schools.com">W3Schools</a>
+			</li>
+			<li>
+				Ask a friend
+			</li>
+			<li>
+				Ask an instructor
+			</li>
+			<li>
+				Instructor asks another instructor
+			</li>
+			<li>
+				Cry together
+			</li>
+		</ol>
+	</body>
+</html>

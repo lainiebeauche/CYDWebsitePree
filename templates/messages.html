@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+    <head>
+        <title>
+            Chat Chambers
+        </title>
+        <link rel="stylesheet"
+              type="text/css"
+              href="{{ url_for('static', filename='queens chambers.css') }}">
+    </head>
+    <body>
+
+        <!-- Write the title of the page in a large heading font -->
+        <h1>
+            Chat Chambers
+        </h1>
+        <!-- Show the navbar -->
+        <div>
+            {% include "navbar.html" %}
+        </div>
+
+
+        
+        <div style="background:white;">
+        {% if session %}
+        Hello queens! Please add a message.
+        <form action="{{ url_for('messages') }}" method="POST">
+
+            Username:
+            <input type="text"
+                   name="username">
+            <br />
+
+            Message:
+            <input type="text" name="text" placeholder="">
+            <br />
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+        <br />
+
+        All messages:
+
+        {% for message in messages %}
+        	<div>
+        		<ul>
+        			<li>
+                        User: {{ message.username }}
+                    </li>
+        			<li>
+                        Message: {{ message.text }}
+                    </li>
+        		</ul>
+        	</div>
+        {% endfor %}
+
+        <button type="button"><a href="{{url_for('delete_all')}}">DELETE ALL</a></button>
+    {% else %}
+        LOG IN QUEEN
+    {% endif %}
+    </div>
+
+    </body>
+</html>

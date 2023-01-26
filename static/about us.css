@@ -1,0 +1,11 @@
+h1{font-family: "Lucida Handwriting" ;font-size: 60px;}
+
+p{font-family: "Times New Roman";font-size: 45px;color: bisque; }
+
+ul{border: 15px  double #ff33cc;width: 50%;font-size: 25px;font-family:"Georgia" ; }
+
+body{background: linear-gradient(to bottom, #990099 21%, #ff99cc 79%);}
+
+img{width:30% ;border-style:dotted ;background-size: 10 px; }
+
+h2{font-family:"Times New Roman" ;font-size: 30px;color: purple;}

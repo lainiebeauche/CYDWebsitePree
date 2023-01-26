@@ -6,9 +6,8 @@ from flask import (
     Flask, redirect, render_template, request, session, url_for, flash
 )
 
-
 APP = Flask(__name__)
-APP.config['SECRET_KEY'] = 'super-secret-key'
+#APP.config['SECRET_KEY'] = 'super-secret-key'
 
 
 AFFIRMATIONS = [

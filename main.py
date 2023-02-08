@@ -1,6 +1,6 @@
 from database import (
     is_username_taken, add_user, authenticate, get_user_from_database,
-    get_all_messages, add_message, delete_all_messages
+    get_all_messages, add_message, delete_all_messages, delete_all_users
 )
 from flask import (
     Flask, redirect, render_template, request, session, url_for, flash
@@ -276,10 +276,11 @@ def pep():
     """Render the pep page."""
     return render_template('pep.html')
 
-@APP.route('/delete_all')
+@APP.route('/delete')
 def delete_all():
     delete_all_messages()
-    return render_template('messages.html', messages=get_all_messages(), session='username' in session)
+    delete_all_users()
+    return redirect(url_for('home'))
 
 @APP.route('/messages', methods=['GET', 'POST'])
 def messages():

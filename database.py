@@ -7,10 +7,6 @@ Base.metadata.create_all(ENGINE)
 DBSession = sessionmaker(bind=ENGINE)
 SESSION = DBSession()
 
-def delete_all_messages():
-    num_deleted = SESSION.query(Message).delete()
-    print(num_deleted)
-
 
 def get_user_from_database(username):
     """Gets a :obj:`User` object by username.
@@ -111,3 +107,11 @@ def get_all_messages():
 
     """
     return reversed(SESSION.query(Message).all())
+
+
+def delete_all_users():
+    SESSION.query(User).delete()
+
+
+def delete_all_messages():
+    SESSION.query(Message).delete()
